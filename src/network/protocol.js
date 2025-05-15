@@ -25,14 +25,20 @@ class Protocol {
    * Initialize protocol handlers
    */
   async initialize() {
-    // Set up protocol handlers
-    this.node.libp2p.handle(`${config.network.protocolPrefix}/sync/height`, this.handleSyncHeight.bind(this));
-    this.node.libp2p.handle(`${config.network.protocolPrefix}/sync/block`, this.handleSyncBlock.bind(this));
-    this.node.libp2p.handle(`${config.network.protocolPrefix}/sync/validators`, this.handleSyncValidators.bind(this));
-    this.node.libp2p.handle(`${config.network.protocolPrefix}/address/pubkey`, this.handleAddressPubkey.bind(this));
-    this.node.libp2p.handle(`${config.network.protocolPrefix}/initial-tokens`, this.handleInitialTokens.bind(this));
-    this.node.libp2p.handle(`${config.network.protocolPrefix}/request`, this.handleRequest.bind(this));
-    this.node.libp2p.handle(`${config.network.protocolPrefix}/response`, this.handleResponse.bind(this));
+    // Check if we're in P2P mode or simulation mode
+    if (this.node.usingP2P && this.node.libp2p && typeof this.node.libp2p.handle === 'function') {
+      // Real P2P mode - set up actual protocol handlers
+      this.node.libp2p.handle(`${config.network.protocolPrefix}/sync/height`, this.handleSyncHeight.bind(this));
+      this.node.libp2p.handle(`${config.network.protocolPrefix}/sync/block`, this.handleSyncBlock.bind(this));
+      this.node.libp2p.handle(`${config.network.protocolPrefix}/sync/validators`, this.handleSyncValidators.bind(this));
+      this.node.libp2p.handle(`${config.network.protocolPrefix}/address/pubkey`, this.handleAddressPubkey.bind(this));
+      this.node.libp2p.handle(`${config.network.protocolPrefix}/initial-tokens`, this.handleInitialTokens.bind(this));
+      this.node.libp2p.handle(`${config.network.protocolPrefix}/request`, this.handleRequest.bind(this));
+      this.node.libp2p.handle(`${config.network.protocolPrefix}/response`, this.handleResponse.bind(this));
+    } else {
+      // Simulation mode - nothing to do here as we're using SimpleNode functionality
+      console.log('P2P Protocol in simulation mode - no handlers registered');
+    }
   }
 
   /**

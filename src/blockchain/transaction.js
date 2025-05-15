@@ -147,7 +147,9 @@ class Transaction {
    * @returns {Transaction} - Transaction instance
    */
   static createTransfer(from, to, amount, fee) {
-    return new Transaction('TRANSFER', from, to, amount, fee);
+    const tx = new Transaction('TRANSFER', from, to, amount, fee);
+    tx.hash = tx.calculateHash();
+    return tx;
   }
 
   /**

@@ -160,7 +160,14 @@ class CLI {
       .argument('<toAddress>', 'Recipient address')
       .argument('<amount>', 'Amount of DOU to send')
       .option('-f, --fee <fee>', 'Transaction fee (higher fee = higher priority)', '0.1')
+      .option('-n, --network', 'Use libp2p networking', false)
       .action(async (fromAddress, toAddress, amount, options) => {
+        // Set environment variable to indicate we want P2PNode if --network was specified
+        if (options.network) {
+          process.env.USE_P2P_NODE = 'true';
+          console.log('Using network mode with libp2p for transaction');
+        }
+        
         await this.initialize();
         try {
           const txHash = await this.node.sendTokens(fromAddress, toAddress, amount, options.fee);

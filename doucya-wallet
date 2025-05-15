@@ -1,0 +1,10 @@
+{
+  "addresses": [
+    {
+      "address": "Douo5snfxs53scyA",
+      "publicKey": "047dd139accd2a9855ad6a27165785d1a62ee9d4165779c39477bde3ca350e553e3a8fc3b4c26b597f355aa2978252d7433146b5b068d229c21bb6b5b1e1c9f39b",
+      "encryptedPrivateKey": "9027dc338bc3575bbb9d61d9c2a133fc1300549e9669e047b626da8d6f06d164"
+    }
+  ],
+  "defaultAddress": "Douo5snfxs53scyA"
+}

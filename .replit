@@ -29,10 +29,6 @@ args = "Send Tokens"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "DoucyA Blockchain"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
 args = "DoucyA Explorer"
 
 [[workflows.workflow.tasks]]
@@ -42,6 +38,14 @@ args = "Check TX"
 [[workflows.workflow.tasks]]
 task = "workflow.run"
 args = "Address Info"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "DoucyA Blockchain P2P"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "P2P Send Tokens"
 
 [[workflows.workflow]]
 name = "DoucyA CLI"
@@ -76,14 +80,6 @@ task = "shell.exec"
 args = "cd src && node index.js send Dou7guxp3ix4ncyA Dout5i4l7qiqwcyA 200"
 
 [[workflows.workflow]]
-name = "DoucyA Blockchain"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "node src/index.js start"
-
-[[workflows.workflow]]
 name = "DoucyA Explorer"
 author = "agent"
 
@@ -106,6 +102,22 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "cd src && node index.js address-info Doue8eylmv193cyA"
+
+[[workflows.workflow]]
+name = "DoucyA Blockchain P2P"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node src/index.js start --network"
+
+[[workflows.workflow]]
+name = "P2P Send Tokens"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src && node index.js send Doue8eylmv193cyA Dout5i4l7qiqwcyA 50 --network"
 
 [deployment]
 run = ["sh", "-c", "npm install elliptic libp2p libp2p-tcp libp2p-mplex libp2p-noise libp2p-bootstrap libp2p-gossipsub libp2p-pubsub-peer-discovery uint8arrays commander level it-pipe && node src/index.js start"]

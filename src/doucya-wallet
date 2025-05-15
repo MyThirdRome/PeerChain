@@ -29,6 +29,21 @@
       "address": "Douhemkg7texecyA",
       "publicKey": "046f15734c7434f8f28e901e1c0069b626cfc680a4dd4be0aba2212f3192b8ee5cc973312a1274cbf22727afec8292305276ce28c56ec1e18e2e2ee7c59847fe6e",
       "encryptedPrivateKey": "45665aad0f8248d423fc2b562969318e594685df1305f95f9eb3388deafd34eb"
+    },
+    {
+      "address": "Doutak3snps5pcyA",
+      "publicKey": "04f980837f0f31881ca017cee23b232daa9cb4d825a75fa3e82e22dfd9641c99c115cb6070cda18760872348bf3f3d2f630363763a8cf769e4accc66e9c11c4f88",
+      "encryptedPrivateKey": "423b45f58be8e2efa5c4ef4d36ae78ddcd4c42e4a973b57df3546c803ac7ae44"
+    },
+    {
+      "address": "Doua5ddrvxvotcyA",
+      "publicKey": "041a12caf24508c434082e6a209e7043cdab5f9415cec0615a55d81443d3e862769dd97d9701e56dfba6a1eff9d6eb91e57e096af7833b8f2117f6b810310d47ff",
+      "encryptedPrivateKey": "b7acf58793191e5dad29dc4467178fe3f19568502b2d9a991bd761d33b5dafa1"
+    },
+    {
+      "address": "Douj7cxcp3w7ccyA",
+      "publicKey": "040ac1683fc9787f69cf76c72b025bb49ae9c1d11369bae23549164d21ef58f2bd2eb0d0e3bf01dd27958ccee8df0d1aef4fd6ef0d93fa5e2386fe728989e666bd",
+      "encryptedPrivateKey": "a557053ee919cc8bc9d6e5fcf20c020afdf06564e4491cb2cf70074d66fed1e4"
     }
   ],
   "defaultAddress": "Doue8eylmv193cyA"
