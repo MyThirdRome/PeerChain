@@ -1,0 +1,21 @@
+DoucyA blockchain: a libp2p based blockchain
+Is mainly a messaging blockchian for peer-to-peer texting and has its own coin called DOU, which has 1.0000000000 CYA, it works with PoS system where people who running a full node can be validators aswell, the deposit to be a validator is 50 DOU, every year the minimum deposit increqses by 10%, validators can deposit to the network any time and any amount they want, but when system increases by 10% at that time only validators who have enough deposit can keep validating, others will be disconnected.
+Fees and rewards: each use sends a message gets 0.75 DOU and when receives gets 0.25 DOU but each user sends a message cannot receive the reward untill the other user answer to their message example:
+A: sends "hello" gets 0
+B: gets 0.25
+B: sends "hey there" gets 0
+A: gets 0.75 for the message answered and gets 0.25 for the message he received = 1.0000000000 DOU
+The validator gets: 150% of everything the users got: for example 0.25 the validator gets: 0.375 also the validator gets APY 17% of the staked amount, but paid out monthly.
+Spam security: users to talk to each other they should white list each other addresses on blockchain and thatâ€™s maintained by validators: A adds B and B adds A: if A sends to B while B is not adding A: then the sender "A" pays a fee of message: 0.75 instead of earning that, and at this case B even received a message doesnâ€™t get a reward, also each user can send up to 200 messages in every given 60 minutes of time, and can send up to 30 messages to a single address in every given 60 minutes exceded messagings than that the user will pay fee as mentioned before (so we can collect these ones in a part called penalties in our code).
+The addresses shall be unique: start with Dou and finish with cyA, between there should be a mix of numbers and letters 1-9 and a-z, 10 characters, example: "Douri71hfo0a7cyA" use any common encryption method like bitcoin or any other crypto no problem, so when a user genrates an address it gives the address and private key which shall be always solve to that address anywhere, the messages shall be encrypted end to end, that means if A sends a message to B throught his address, the message crypts using the B address and can be decrypted on the B side using his private key and ensure a good way to create addresses and private key, shall be secure tho,
+Groups and channels: every address can create a group where users can interact with each other in that group chat (no rewards for any user sends or receives a message there), also the group creation shall be either public any one can join or private so the admins shall accept when a user wants to join, the channel also shall be either private or public anyone can join, but users cannot send messages, only view from what admins post, also no rewards for this, except for validators, the addresses for goups and channels shall be Dou(6digits and letters)cyA, instezd of 10,
+The fees for sending coins make it by higher and priority like other cryptocurrencies, and doesnâ€™t need a white listing as sending a message,
+The node CLI shall be rich and have all necessary commands: example (not only): to create address, to send a message, to check messages, to whitelist an address, to send money, to see the private key, to become a validator, to terminate validation, to check network status (block heitgh etc.), etc.,
+Make a good way of node exploring system, and shall be all working fine and ready for production, please make it work that i will now start with 2 nodes and see, just for a start, the first 10 addresses start, shall have 15000 DOUs each for testing purpose example:
+1st node installed and created address gets 15k, start to be a validator node, second one in other server also gets 15k and when i give IP of first node, it has to syncronize and understand, 3rd gets also 15k and when i give IPs of other 2 nodes it syncronize etc. Up to 10 first nodes can have free 15k, and after that no more free rewards
+Language: NodeJS
+Storage: LevelDB
+All the peer discovering, broadcast etc. use: libp2p,
+
+
+ 
