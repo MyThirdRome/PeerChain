@@ -1,0 +1,111 @@
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "DoucyA CLI"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Check Balance"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Mint Tokens"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Send Tokens"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "DoucyA Blockchain"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "DoucyA Explorer"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Check TX"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Address Info"
+
+[[workflows.workflow]]
+name = "DoucyA CLI"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src && node index.js create-address"
+
+[[workflows.workflow]]
+name = "Check Balance"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src && node index.js balance"
+
+[[workflows.workflow]]
+name = "Mint Tokens"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src && node index.js mint Doue8eylmv193cyA 1000"
+
+[[workflows.workflow]]
+name = "Send Tokens"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src && node index.js send Dou7guxp3ix4ncyA Dout5i4l7qiqwcyA 200"
+
+[[workflows.workflow]]
+name = "DoucyA Blockchain"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node src/index.js start"
+
+[[workflows.workflow]]
+name = "DoucyA Explorer"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src && node index.js explore"
+
+[[workflows.workflow]]
+name = "Check TX"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src && node index.js tx TX_Dou7guxp_Dout5i4l_1747304903542"
+
+[[workflows.workflow]]
+name = "Address Info"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src && node index.js address-info Doue8eylmv193cyA"
+
+[deployment]
+run = ["sh", "-c", "npm install elliptic libp2p libp2p-tcp libp2p-mplex libp2p-noise libp2p-bootstrap libp2p-gossipsub libp2p-pubsub-peer-discovery uint8arrays commander level it-pipe && node src/index.js start"]

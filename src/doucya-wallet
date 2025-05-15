@@ -1,0 +1,35 @@
+{
+  "addresses": [
+    {
+      "address": "Doue8eylmv193cyA",
+      "publicKey": "048c6423948d04e8d2d73d3c6e8f3a63bc7a7f9bf8b97bca018316f837b283f6dcb65ce1fa598a3881550cd7baa0932f3e4f2d36253ac1a958c2babca0374e7476",
+      "encryptedPrivateKey": "019a5c16b192857c4b90b70e69571f3dbad74a93b4224e562ddbb23ee3277f30"
+    },
+    {
+      "address": "Dou7guxp3ix4ncyA",
+      "publicKey": "04531890fa960e71d96f099b997774ba7d1ba4632e775d063b4c9bb9b35422d6e27ef6513450150c8e1afbd5f56ee4fd2e9a97512d62c74a10ac2a1378fe66a4d6",
+      "encryptedPrivateKey": "ee0a9ced267be548051a4613fa92f3326fa012a72bf47fad2ea47e605cf629a9"
+    },
+    {
+      "address": "Dout5i4l7qiqwcyA",
+      "publicKey": "04fc1d334c05d1d288c6ef8d9f3cf6fcb6ae0790dfc5b07720a4620b99bf5ceb7f6570946300674d5b91e46191909a9bf7e939206f41e0975105bc3310c4a84310",
+      "encryptedPrivateKey": "e8672cc9df411824ba716bebb68f40eb5322f45e407f55e8718ae75244cc23ef"
+    },
+    {
+      "address": "Doubbx6zms1nzcyA",
+      "publicKey": "04b54575c28600a2a9956271d7229c9470edd2a9d8220bf30a8f50dd28d571ee7b73d31bdc1093de80a2a33ac5f2bd473d7875c67d78a07760e5addf29dc2f7408",
+      "encryptedPrivateKey": "da72ac7d28750ae02a70caaa849089d54ab40cbb5f7c3e91844ad1ed345831cc"
+    },
+    {
+      "address": "Douvit6ajbka8cyA",
+      "publicKey": "0417f5f4a286105f75a2c5abdb69383cdf9dfa4328a28897920277c78ca66b46543736a31aa1e9aee973a05e05da497f58d157763e5636d426559464a3213d54ba",
+      "encryptedPrivateKey": "79d55b6b3b673a52b529424ffce122b6de35719fdc0c2b50ec2b3e64889c78a6"
+    },
+    {
+      "address": "Douhemkg7texecyA",
+      "publicKey": "046f15734c7434f8f28e901e1c0069b626cfc680a4dd4be0aba2212f3192b8ee5cc973312a1274cbf22727afec8292305276ce28c56ec1e18e2e2ee7c59847fe6e",
+      "encryptedPrivateKey": "45665aad0f8248d423fc2b562969318e594685df1305f95f9eb3388deafd34eb"
+    }
+  ],
+  "defaultAddress": "Doue8eylmv193cyA"
+}
